@@ -1,9 +1,9 @@
 #include <iostream>
 
 using namespace std;
-const int n = 4;
-double x[n] = {1,2,3,4};
-double y[n] = {1, 4, 9, 16};
+const int n = 5;
+double x[n] = {-1.0, -0.5, 0, 0.5, 1};
+double y[n] = {-1.56, -0.55, 0, 0.55, 1.56};
 
 double lagrange(double xp)
 {
@@ -26,7 +26,7 @@ double lagrange(double xp)
 
 int main()
 {
-	double xp = 2.5;
-	cout << lagrange(xp);
+	for(double i = -1; i <= 1; i+=0.01)
+		cout << i<< "\t"<< lagrange(i) << endl;
 	return 0;
 }
