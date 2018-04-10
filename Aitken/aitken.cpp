@@ -29,7 +29,9 @@ double aitkien(double xp)
 }
 int main()
 {
+	ofstream fout("data.txt");
 	for(double i = -1; i <= 1; i+=0.01)
-		cout << i<< "\t"<< aitkien(i) << endl;
+		fout << i<< "\t"<< aitkien(i) << endl;
+	fout.close();
 	return 0;
 }

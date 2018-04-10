@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 const int n = 5;
@@ -26,7 +27,9 @@ double lagrange(double xp)
 
 int main()
 {
+	ofstream fout("data.txt");
 	for(double i = -1; i <= 1; i+=0.01)
-		cout << i<< "\t"<< lagrange(i) << endl;
+		fout << i<< "\t"<< lagrange(i) << endl;
+	fout.close();
 	return 0;
 }
